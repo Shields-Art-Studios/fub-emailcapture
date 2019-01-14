@@ -3,14 +3,14 @@
  * @Date:   2019-01-14T08:03:28-08:00
  * @Filename: style.css
  * @Last modified by:   Jack Woods
- * @Last modified time: 2019-01-14T08:09:56-08:00
+ * @Last modified time: 2019-01-14T08:43:12-08:00
  * @Copyright: 2018 Oregon State University
  */
 
  /* This CSS was taken straight from Divi, the design plugin used on changeyourowndiaper.com */
 
 /* Style for the subscribe button */
-body #page-container .et_pb_signup_0.et_pb_subscribe .et_pb_newsletter_button.et_pb_button {
+.custom_subscribe_button {
   color: #ffffff !important;
   background: #707070;
   border-width: 6px !important;
@@ -44,12 +44,7 @@ body #page-container .et_pb_signup_0.et_pb_subscribe .et_pb_newsletter_button.et
 }
 
 /* Style for the header text */
-.et_pb_signup_0.et_pb_subscribe .et_pb_newsletter_description h2,
-.et_pb_signup_0.et_pb_subscribe .et_pb_newsletter_description h1.et_pb_module_header,
-.et_pb_signup_0.et_pb_subscribe .et_pb_newsletter_description h3.et_pb_module_header,
-.et_pb_signup_0.et_pb_subscribe .et_pb_newsletter_description h4.et_pb_module_header,
-.et_pb_signup_0.et_pb_subscribe .et_pb_newsletter_description h5.et_pb_module_header,
-.et_pb_signup_0.et_pb_subscribe .et_pb_newsletter_description h6.et_pb_module_header {
+.subscribe_header {
   font-family: 'Alice',Georgia,"Times New Roman",serif !important;
   font-weight: 700 !important;
   font-size: 42px !important;
