@@ -3,7 +3,7 @@
  * @Date:   2019-01-14T08:03:28-08:00
  * @Filename: style.css
  * @Last modified by:   Jack Woods
- * @Last modified time: 2019-01-14T08:43:12-08:00
+ * @Last modified time: 2019-01-14T08:47:10-08:00
  * @Copyright: 2018 Oregon State University
  */
 
@@ -22,6 +22,8 @@
   font-weight: 600 !important;
   text-transform: uppercase !important;
   background-color: #707070;
+  box-shadow: 0px 10px 30px 0px rgba(0,0,0,0.2);
+  width: 100%;
 }
 
 /* Style for the input element */
