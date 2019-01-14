@@ -3,7 +3,7 @@
  * @Date:   2019-01-14T08:06:55-08:00
  * @Filename: script.js
  * @Last modified by:   Jack Woods
- * @Last modified time: 2019-01-14T08:35:13-08:00
+ * @Last modified time: 2019-01-14T08:36:42-08:00
  * @Copyright: 2018 Oregon State University
  */
 // This script listens for a button press on the subscribe button, and then registers the user's email in FollowUpBoss.
@@ -18,6 +18,7 @@ var leadTags = ['changeyourowndiaper']
 
 // Add button event listener
 let button = document.getElementById('subscribe').addEventListener('click', function(event) {
+  console.log('Click!')
   var data = JSON.stringify({
     'source': 'Change Your Own Diaper',
     'type': 'General Inquiry',
