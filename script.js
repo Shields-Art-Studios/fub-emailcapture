@@ -3,7 +3,7 @@
  * @Date:   2019-01-14T08:06:55-08:00
  * @Filename: script.js
  * @Last modified by:   Jack Woods
- * @Last modified time: 2019-01-14T08:17:58-08:00
+ * @Last modified time: 2019-01-14T08:22:05-08:00
  * @Copyright: 2018 Oregon State University
  */
 // This script listens for a button press on the subscribe button, and then registers the user's email in FollowUpBoss.
@@ -38,6 +38,7 @@ let button = document.getElementById('subscribe').addEventListener('click', func
   var xhr = new XMLHttpRequest()
   xhr.addEventListener("readystatechange", function () {
     if (this.readyState === this.DONE) {
+      document.getElementsByClassName('et_pb_newsletter_result et_pb_newsletter_success')[0].textContent = 'Success!'
       console.log("Lead added with status: " + this.status + " and message: ")
       console.log(JSON.parse(this.responseText))
     }
