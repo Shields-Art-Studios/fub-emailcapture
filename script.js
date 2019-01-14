@@ -3,7 +3,7 @@
  * @Date:   2019-01-14T08:06:55-08:00
  * @Filename: script.js
  * @Last modified by:   Jack Woods
- * @Last modified time: 2019-01-14T08:36:42-08:00
+ * @Last modified time: 2019-01-14T08:38:54-08:00
  * @Copyright: 2018 Oregon State University
  */
 // This script listens for a button press on the subscribe button, and then registers the user's email in FollowUpBoss.
@@ -22,10 +22,10 @@ let button = document.getElementById('subscribe').addEventListener('click', func
   var data = JSON.stringify({
     'source': 'Change Your Own Diaper',
     'type': 'General Inquiry',
-    'message': document.getElementById('emailInput').value + ' subscribed to the ChangeYourOwnDiaper.com email list!\n',
+    'message': document.getElementById('et_pb_signup_email').value + ' subscribed to the ChangeYourOwnDiaper.com email list!\n',
     'description': 'Notification - Retiring Agent Calculator Results',
     'person': {
-      'emails': [ { 'value': document.getElementById('emailInput').value, 'type': 'home' } ],
+      'emails': [ { 'value': document.getElementById('et_pb_signup_email').value, 'type': 'home' } ],
       'tags': leadTags,
       'sourceUrl': 'https://changeyourowndiaper.com/freebies/',
       'assignedTo' : 'Nick Krautter'
