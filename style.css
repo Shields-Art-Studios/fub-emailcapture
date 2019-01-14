@@ -1,0 +1,58 @@
+/**
+ * @Author: Jack Woods
+ * @Date:   2019-01-14T08:03:28-08:00
+ * @Filename: style.css
+ * @Last modified by:   Jack Woods
+ * @Last modified time: 2019-01-14T08:09:56-08:00
+ * @Copyright: 2018 Oregon State University
+ */
+
+ /* This CSS was taken straight from Divi, the design plugin used on changeyourowndiaper.com */
+
+/* Style for the subscribe button */
+body #page-container .et_pb_signup_0.et_pb_subscribe .et_pb_newsletter_button.et_pb_button {
+  color: #ffffff !important;
+  background: #707070;
+  border-width: 6px !important;
+  border-color: #707070;
+  border-radius: 0px;
+  letter-spacing: 2px;
+  font-size: 14px;
+  font-family: 'Poppins',Helvetica,Arial,Lucida,sans-serif !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  background-color: #707070;
+}
+
+/* Style for the input element */
+.et_pb_newsletter_form .input,
+.et_pb_newsletter_form input[type="password"],
+.et_pb_newsletter_form input[type="text"],
+.et_pb_newsletter_form p.et_pb_newsletter_field input[type="text"],
+.et_pb_newsletter_form p.et_pb_newsletter_field textarea,
+.et_pb_newsletter_form select,
+.et_pb_newsletter_form textarea {
+  width: 100%;
+  padding: 14px 4% !important;
+  border-width: 0;
+  border-radius: 3px;
+  color: #666;
+  background-color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  -webkit-appearance: none;
+}
+
+/* Style for the header text */
+.et_pb_signup_0.et_pb_subscribe .et_pb_newsletter_description h2,
+.et_pb_signup_0.et_pb_subscribe .et_pb_newsletter_description h1.et_pb_module_header,
+.et_pb_signup_0.et_pb_subscribe .et_pb_newsletter_description h3.et_pb_module_header,
+.et_pb_signup_0.et_pb_subscribe .et_pb_newsletter_description h4.et_pb_module_header,
+.et_pb_signup_0.et_pb_subscribe .et_pb_newsletter_description h5.et_pb_module_header,
+.et_pb_signup_0.et_pb_subscribe .et_pb_newsletter_description h6.et_pb_module_header {
+  font-family: 'Alice',Georgia,"Times New Roman",serif !important;
+  font-weight: 700 !important;
+  font-size: 42px !important;
+  color: #ffffff !important;
+  line-height: 1.5em !important;
+}
