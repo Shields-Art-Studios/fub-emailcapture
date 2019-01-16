@@ -27,7 +27,7 @@ let button = document.getElementById('subscribe').addEventListener('click', func
       'emails': [ { 'value': document.getElementById('et_pb_signup_email').value, 'type': 'home' } ],
       'tags': leadTags,
       'sourceUrl': 'https://changeyourowndiaper.com/freebies/',
-      'assignedTo' : 'Nick Krautter'
+      'assignedTo' : 'Gabriel Shields'
     },
     'campaign': {
       'source': 'Change Your Own Diaper',
