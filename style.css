@@ -3,7 +3,7 @@
  * @Date:   2019-01-14T08:03:28-08:00
  * @Filename: style.css
  * @Last modified by:   Jack Woods
- * @Last modified time: 2019-01-16T19:48:01-08:00
+ * @Last modified time: 2019-01-16T19:53:25-08:00
  * @Copyright: 2018 Oregon State University
  */
 
@@ -57,4 +57,9 @@
   font-size: 42px !important;
   color: #ffffff !important;
   line-height: 1.5em !important;
+  padding: 0;
+}
+
+.result {
+  color: #fff;
 }
