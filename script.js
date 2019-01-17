@@ -3,7 +3,7 @@
  * @Date:   2019-01-14T08:06:55-08:00
  * @Filename: script.js
  * @Last modified by:   Jack Woods
- * @Last modified time: 2019-01-16T19:23:14-08:00
+ * @Last modified time: 2019-01-16T19:35:43-08:00
  * @Copyright: 2018 Oregon State University
  */
 // This script listens for a button press on the subscribe button, and then registers the user's email in FollowUpBoss.
@@ -46,6 +46,9 @@ let button = document.getElementById('subscribe').addEventListener('click', func
 
         // Disable the button
         clicked = 1
+
+        // Show success message
+        document.getElementsByClassName('et_pb_newsletter_result et_pb_newsletter_success')[0].setAttribute('display', 'inline')
       }
      })
 
