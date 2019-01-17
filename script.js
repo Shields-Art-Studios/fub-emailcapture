@@ -3,7 +3,7 @@
  * @Date:   2019-01-14T08:06:55-08:00
  * @Filename: script.js
  * @Last modified by:   Jack Woods
- * @Last modified time: 2019-01-14T08:40:56-08:00
+ * @Last modified time: 2019-01-16T18:57:53-08:00
  * @Copyright: 2018 Oregon State University
  */
 // This script listens for a button press on the subscribe button, and then registers the user's email in FollowUpBoss.
@@ -22,12 +22,12 @@ let button = document.getElementById('subscribe').addEventListener('click', func
     'source': 'Change Your Own Diaper',
     'type': 'General Inquiry',
     'message': document.getElementById('et_pb_signup_email').value + ' subscribed to the ChangeYourOwnDiaper.com email list!\n',
-    'description': 'Notification - Retiring Agent Calculator Results',
+    'description': 'Notification',
     'person': {
       'emails': [ { 'value': document.getElementById('et_pb_signup_email').value, 'type': 'home' } ],
       'tags': leadTags,
       'sourceUrl': 'https://changeyourowndiaper.com/freebies/',
-      'assignedTo' : 'Gabriel Shields'
+      'assignedTo' : 'Nick Krautter'
     },
     'campaign': {
       'source': 'Change Your Own Diaper',
@@ -41,6 +41,9 @@ let button = document.getElementById('subscribe').addEventListener('click', func
       document.getElementsByClassName('et_pb_newsletter_result et_pb_newsletter_success')[0].textContent = 'Success!'
       console.log('Lead added with status: ' + this.status + ' and message: ')
       console.log(JSON.parse(this.responseText))
+
+      // Disable the button
+      button.disabled = true
     }
    })
 
