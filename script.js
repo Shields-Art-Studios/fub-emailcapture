@@ -3,7 +3,7 @@
  * @Date:   2019-01-14T08:06:55-08:00
  * @Filename: script.js
  * @Last modified by:   Jack Woods
- * @Last modified time: 2019-01-16T19:05:02-08:00
+ * @Last modified time: 2019-01-16T19:14:56-08:00
  * @Copyright: 2018 Oregon State University
  */
 // This script listens for a button press on the subscribe button, and then registers the user's email in FollowUpBoss.
@@ -44,7 +44,7 @@ let button = document.getElementById('subscribe').addEventListener('click', func
         console.log(JSON.parse(this.responseText))
 
         // Disable the button
-        button.disabled = true
+        document.getElementById('subscribe').disabled = true
       }
      })
 
@@ -52,10 +52,12 @@ let button = document.getElementById('subscribe').addEventListener('click', func
     xhr.setRequestHeader('Authorization', 'Basic ' + btoa('483fb0459ff828db2f8962ac6053ca28f79c07:'))
     xhr.setRequestHeader('Content-Type', 'application/json')
     xhr.send(data)
+  } else {
+    console.log('Email Invalid')
   }
 })
 
 function validateEmail(email) {
-    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(email).toLowerCase());
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    return re.test(String(email).toLowerCase())
 }
