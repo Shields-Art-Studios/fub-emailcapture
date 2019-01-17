@@ -3,7 +3,7 @@
  * @Date:   2019-01-14T08:06:55-08:00
  * @Filename: script.js
  * @Last modified by:   Jack Woods
- * @Last modified time: 2019-01-16T19:00:49-08:00
+ * @Last modified time: 2019-01-16T19:05:02-08:00
  * @Copyright: 2018 Oregon State University
  */
 // This script listens for a button press on the subscribe button, and then registers the user's email in FollowUpBoss.
@@ -18,7 +18,7 @@ var leadTags = ['changeyourowndiaper']
 
 // Add button event listener
 let button = document.getElementById('subscribe').addEventListener('click', function(event) {
-  if (document.getElementById('et_pb_signup_email').value.length > 0) {
+  if (validateEmail(document.getElementById('et_pb_signup_email').value)) {
     var data = JSON.stringify({
       'source': 'Change Your Own Diaper',
       'type': 'General Inquiry',
@@ -54,3 +54,8 @@ let button = document.getElementById('subscribe').addEventListener('click', func
     xhr.send(data)
   }
 })
+
+function validateEmail(email) {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
