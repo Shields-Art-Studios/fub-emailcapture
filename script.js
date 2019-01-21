@@ -3,7 +3,7 @@
  * @Date:   2019-01-14T08:06:55-08:00
  * @Filename: script.js
  * @Last modified by:   Jack Woods
- * @Last modified time: 2019-01-21T10:32:54-08:00
+ * @Last modified time: 2019-01-21T10:40:46-08:00
  * @Copyright: 2018 Oregon State University
  */
 // This script listens for a button press on the subscribe button, and then registers the user's email in FollowUpBoss.
@@ -52,10 +52,10 @@ let button = document.getElementById('subscribe').addEventListener('click', func
     //   }
     //  })
 
-    xhr.open('POST', 'https://api.followupboss.com/v1/events')
-    xhr.setRequestHeader('Authorization', 'Basic ' + btoa('483fb0459ff828db2f8962ac6053ca28f79c07:'))
-    xhr.setRequestHeader('Content-Type', 'application/json')
-    xhr.send(data)
+    // xhr.open('POST', 'https://api.followupboss.com/v1/events')
+    // xhr.setRequestHeader('Authorization', 'Basic ' + btoa('483fb0459ff828db2f8962ac6053ca28f79c07:'))
+    // xhr.setRequestHeader('Content-Type', 'application/json')
+    // xhr.send(data)
   } else {
     console.log('Email Invalid')
   }
