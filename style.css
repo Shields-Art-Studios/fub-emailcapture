@@ -3,7 +3,7 @@
  * @Date:   2019-01-14T08:03:28-08:00
  * @Filename: style.css
  * @Last modified by:   Jack Woods
- * @Last modified time: 2019-01-21T10:57:38-08:00
+ * @Last modified time: 2019-01-21T10:58:53-08:00
  * @Copyright: 2018 Oregon State University
  */
 
@@ -67,6 +67,6 @@
 
 .disabled {
   pointer-events: none;
-  color: #f5f5f5;
-  background-color: #707070;
+  color: #f5f5f5 !important;
+  background-color: #707070 !important;
 }
