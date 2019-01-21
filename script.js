@@ -3,7 +3,7 @@
  * @Date:   2019-01-14T08:06:55-08:00
  * @Filename: script.js
  * @Last modified by:   Jack Woods
- * @Last modified time: 2019-01-21T10:44:02-08:00
+ * @Last modified time: 2019-01-21T10:51:21-08:00
  * @Copyright: 2018 Oregon State University
  */
 // This script listens for a button press on the subscribe button, and then registers the user's email in FollowUpBoss.
@@ -37,27 +37,27 @@ let button = document.getElementById('subscribe').addEventListener('click', func
       }
     })
     console.log(data)
-    // var xhr = new XMLHttpRequest()
-    // xhr.addEventListener('readystatechange', function () {
-    //   if (this.readyState === this.DONE) {
-    //     document.getElementsByClassName('et_pb_newsletter_result et_pb_newsletter_success')[0].textContent = 'Success!'
-    //     console.log('Lead added with status: ' + this.status + ' and message: ')
-    //     console.log(JSON.parse(this.responseText))
-    //
-    //     // Disable the button
-    //     clicked = 1
-    //
-    //     // Show success message
-    //     document.getElementsByClassName('result')[0].textContent = 'Success'
-    //   }
-    //  })
+    var xhr = new XMLHttpRequest()
+    xhr.addEventListener('readystatechange', function () {
+      if (this.readyState === this.DONE) {
+        console.log('Lead added with status: ' + this.status + ' and message: ')
+        console.log(JSON.parse(this.responseText))
 
-    // xhr.open('POST', 'https://api.followupboss.com/v1/events')
-    // xhr.setRequestHeader('Authorization', 'Basic ' + btoa('483fb0459ff828db2f8962ac6053ca28f79c07:'))
-    // xhr.setRequestHeader('Content-Type', 'application/json')
-    // xhr.send(data)
+        // Disable the button
+        clicked = 1
+
         // Show success message
-        document.getElementsByClassName('result')[0].textContent = 'Success'
+        document.getElementsByClassName('result')[0].textContent = 'Your request has been sent!'
+
+        // Disable text input
+        document.getElementById('et_pb_signup_email').disabled = true
+      }
+     })
+
+    xhr.open('POST', 'https://api.followupboss.com/v1/events')
+    xhr.setRequestHeader('Authorization', 'Basic ' + btoa('483fb0459ff828db2f8962ac6053ca28f79c07:'))
+    xhr.setRequestHeader('Content-Type', 'application/json')
+    xhr.send(data)
   } else {
     console.log('Email Invalid')
   }
