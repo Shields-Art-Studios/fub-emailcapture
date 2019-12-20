@@ -22,7 +22,6 @@ let button = document.getElementById('subscribe').addEventListener('click', func
   let spaceLocation = document.getElementById('et_pb_signup_name').value.indexOf(' ')
   let firstName = spaceLocation !== -1 ? document.getElementById('et_pb_signup_name').value.substring(0, spaceLocation) : document.getElementById('et_pb_signup_name').value
   let lastName = spaceLocation !== -1 ? document.getElementById('et_pb_signup_name').value.substring(spaceLocation + 1, document.getElementById('et_pb_signup_name').value.length) : ''
-  console.log(lastName)
   if (validateEmail(document.getElementById('et_pb_signup_email').value) && clicked === 0) {
     var data = JSON.stringify({
       'source': 'Change Your Own Diaper',
