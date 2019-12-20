@@ -58,6 +58,9 @@ let button = document.getElementById('subscribe').addEventListener('click', func
         let input = document.getElementById('et_pb_signup_email')
         input.disabled = true
         input.classList.add('disabled')
+        input = document.getElementById('et_pb_signup_name')
+        input.disabled = true
+        input.classList.add('disabled')
       }
      })
 
