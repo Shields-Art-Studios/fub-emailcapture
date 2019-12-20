@@ -19,6 +19,9 @@ var leadTags = ['changeyourowndiaper']
 // Add button event listener
 var clicked = 0
 let button = document.getElementById('subscribe').addEventListener('click', function(event) {
+  let spaceLocation = document.getElementById('et_pb_signup_name').value.indexOf(' ')
+  let firstName = spaceLocation !== -1 ? document.getElementById('et_pb_signup_name').value.substring(0, spaceLocation) : document.getElementById('et_pb_signup_name').value
+  let lastName = spaceLocation !== -1 ? document.getElementById('et_pb_signup_name').value.substring(spaceLocation + 1, document.getElementById('et_pb_signup_name').value.length) : ''
   if (validateEmail(document.getElementById('et_pb_signup_email').value) && clicked === 0) {
     var data = JSON.stringify({
       'source': 'Change Your Own Diaper',
@@ -26,6 +29,8 @@ let button = document.getElementById('subscribe').addEventListener('click', func
       'message': document.getElementById('et_pb_signup_email').value + ' subscribed to the ChangeYourOwnDiaper.com email list!\n',
       'description': 'Notification',
       'person': {
+        'firstName': firstName,
+        'lastName': lastName,
         'emails': [ { 'value': document.getElementById('et_pb_signup_email').value, 'type': 'home' } ],
         'tags': leadTags,
         'sourceUrl': 'https://changeyourowndiaper.com/freebies/',
